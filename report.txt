@@ -1,0 +1,67 @@
+### 1. Introduction 
+
+Brief overview of the tool (name, creators, brief functionality). 
+
+State clearly why this tool was selected. 
+
+Contextualize its relevance within current ML trends and research directions. 
+
+### 2. Background and Motivation 
+
+Clearly describe the historical and technical context. 
+
+Explain what specific ML problems or limitations the tool addresses. 
+
+Outline motivations driving the tool's creation or recent development. 
+
+### 3. Technical Overview 
+
+Detail how the tool operates, focusing on underlying concepts, technical mechanisms, or theoretical foundations. 
+
+Provide a descriptive explanation without requiring coding examples. 
+
+### 4. Applications and Use Cases 
+
+Clearly illustrate real-world scenarios and applications. 
+
+Provide innovative or especially relevant examples to highlight potential impacts. 
+
+### 5. Impact on the ML Field 
+
+Critically assess how this tool could influence ongoing ML research, industry practices, or the broader AI community. 
+
+Mention specific implications, improvements in efficiency, performance, or any disruptive potential. 
+
+### 6. Practical Usage Guidelines (No code required) 
+
+Describe how users might practically integrate the tool into existing workflows or processes without including explicit coding examples. 
+
+Detail the integration process, compatibility considerations, setup requirements, or conceptual workflows. 
+
+### 7. Limitations and Challenges 
+
+Clearly articulate current limitations, weaknesses, or gaps. 
+
+Offer thoughtful and practical suggestions or recommendations for future improvements. 
+
+### 8. Conclusion 
+
+Summarize key points and insights gained through your deep research. 
+
+Provide a reasoned outlook on future developments, sustainability, or evolution of the tool. 
+
+### 9. References 
+
+List at least 10 verifiable ("checkable") sources with clear citation formatting. 
+
+MUST use URLs for automatic verification. 
+
+Sources may include official documentation, academic papers, credible blogs, authoritative industry articles, or GitHub repositories. 
+
+ 
+**Formatting and Length**
+Your .txt file should have a clearly organized structure with distinguishable headings marked using plain text (e.g., ### 1. Introduction). 
+
+Document length: approximately 1,000–1,500 words (around 2–3 pages of text). 
+
+Ensure readability, clarity, and professional communication quality. 
