@@ -1,10 +1,7 @@
 ### 1. Introduction 
 
-Brief overview of the tool (name, creators, brief functionality). 
-
-State clearly why this tool was selected. 
-
-Contextualize its relevance within current ML trends and research directions. 
+In practice, SmoothDetector’s technical pipeline can be summarized as follows:
+Feature Extraction: The text component of a post (e.g., a tweet) is converted to an embedding using a deep neural network that accounts for word context and tone (the model learns, for example, how words relate in sequence and even the “sentiment” or tone of the message). The image component is processed with a deep CNN or similar, possibly pre-trained on image data, yielding an image feature embedding. Notably, the same positional encoding concept is applied to image features, which may involve encoding the positions of objects or pixels so that spatial relationships are captured alongside the visual content.
 
 ### 2. Background and Motivation 
 
