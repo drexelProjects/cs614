@@ -1,30 +1,21 @@
-### 1. Introduction 
+### 1. Introduction
 
-Brief overview of the tool (name, creators, brief functionality). 
-
-State clearly why this tool was selected. 
-
-Contextualize its relevance within current ML trends and research directions. 
+SmoothDetector is a recently developed machine learning tool introduced in April 2025 by researchers at Concordia University. It is designed to detect fake news by analyzing both text and image content simultaneously, combining deep neural networks with probabilistic modeling [1]. This tool was selected for evaluation because it represents a unique step forward in multimodal misinformation detection and reflects critical advances in trust-aware AI systems which is crucial to their wide spread adoption. With the increasing prevalence of fake news—often disseminated through mixed-media formats like tweets with deceptive captions and unrelated images—SmoothDetector's design is highly relevant within current machine learning research trends focused on context fusion and uncertainty quantification [2][3].
 
 ### 2. Background and Motivation 
 
-Clearly describe the historical and technical context. 
-
-Explain what specific ML problems or limitations the tool addresses. 
-
-Outline motivations driving the tool's creation or recent development. 
+The motivation behind SmoothDetector lies in the growing societal and technological challenges posed by misinformation on social media. Traditional fake news detectors relied heavily on text-only models, which often failed when misinformation was conveyed through visuals or multimodal content [4]. SmoothDetector addresses this gap by incorporating a probabilistic multimodal architecture that not only fuses text and image signals but also evaluates the confidence of its predictions using a smoothed Dirichlet distribution [5].
+Researchers monitored differential diffusion of all verified true and fake news dirtributed on Twitter from 20016 to 2017, and reported that falsehood diffused significantly farther, faster, deeper, and more broadly than the truth in all categories of information, and the effects were more pronounced for false political news than for false news about terrorism, natural disasters, science, urban legends, or financial information. They also reported that false news was more novel than true news, which suggests that people were more likely to share novel information [2]. The team sought to create a model that could reason more like humans while also acknowledging ambiguity, weighing mixed signals, and issuing probabilistic, rather than binary, judgements [1][6]. These motivations align with the broader push in ML toward explainable, trustworthy AI capable of delivering calibrated outputs.
 
 ### 3. Technical Overview 
 
-Detail how the tool operates, focusing on underlying concepts, technical mechanisms, or theoretical foundations. 
-
-Provide a descriptive explanation without requiring coding examples. 
+SmoothDetector operates by fusing features extracted from two modalities—text and images—into a shared latent representation, which is then interpreted by a probabilistic module. The text encoder (e.g., transformer-based) generates semantic embeddings of a social media post, while the image encoder (e.g., CNN or vision transformer) extracts visual features [7]. These embeddings are projected into a continuous latent space where inter-modality relationships are modeled.
+What sets SmoothDetector apart is its use of a smoothed Dirichlet distribution to model uncertainty over the classification decision (fake vs. real). This probabilistic approach enables the model to output belief distributions rather than hard class assignments [5][8]. The use of subjective logic and evidential deep learning concepts helps mitigate overconfidence—a common flaw in traditional classifiers [9]. The final output is a confidence-weighted probability estimate that reflects both the evidence collected from input features and the uncertainty inherent in the classification.
 
 ### 4. Applications and Use Cases 
 
-Clearly illustrate real-world scenarios and applications. 
-
-Provide innovative or especially relevant examples to highlight potential impacts. 
+SmoothDetector is tailored for fake news detection on platforms like Twitter (X), where posts often include both text and accompanying images. It can be integrated into moderation systems to flag potentially deceptive content for human review or automated intervention [1][10]. For instance, during an election or public health emergency, SmoothDetector can help surface suspicious posts that might otherwise evade detection due to subtle manipulations of language and media.
+Beyond social media, SmoothDetector can be useful in journalistic contexts where verifying user-generated content is critical. Fact-checkers can use it to identify content that may require additional scrutiny. Future extensions could include integration with video and audio modalities, expanding its applicability to platforms like TikTok, YouTube, and podcast moderation [6][11].
 
 ### 5. Impact on the ML Field 
 
