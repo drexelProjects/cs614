@@ -28,27 +28,42 @@ Provide innovative or especially relevant examples to highlight potential impact
 
 ### 5. Impact on the ML Field 
 
-Critically assess how this tool could influence ongoing ML research, industry practices, or the broader AI community. 
+SmoothDetector is a recent advancement in machine learning that combines uncertainty modeling and multimodal learning to improve fake news detection. Unlike traditional models that provide overconfident or opaque outputs, SmoothDetector uses smoothed Dirichlet distributions to generate calibrated confidence scores, helping it express not just predictions but also the uncertainty behind them [1-3]. This approach enhances trust and interpretability, especially in sensitive applications [4].
+In terms of multimodal fusion, SmoothDetector moves beyond earlier methods that simply merged text and image features, such as SpotFake [5]. Instead, it jointly trains on text-image pairs to learn shared representations, capturing subtle interactions that separate models would miss. This enables the detection of hidden patterns between modalities and sets a new benchmark for multimodal AI systems [1].
+By aligning with ethical AI principles such as transparency and explainability [6], SmoothDetector serves as both a technical innovation and a model for responsible deployment. Its design could inspire similar approaches in domains like healthcare and finance, where trustworthy and interpretable AI is crucial [7].
 
-Mention specific implications, improvements in efficiency, performance, or any disruptive potential. 
+### 6. Practical Usage Guidelines 
 
-### 6. Practical Usage Guidelines (No code required) 
-
-Describe how users might practically integrate the tool into existing workflows or processes without including explicit coding examples. 
-
-Detail the integration process, compatibility considerations, setup requirements, or conceptual workflows. 
+SmoothDetector can be effectively integrated into moderation and fact-checking workflows by processing social media posts that contain both text and images. These inputs must be preprocessed, text should be cleaned and tokenized, and images normalized, to align with the model’s training data [1]. Upon inference, SmoothDetector returns a smoothed probability score indicating the likelihood that a post is fake, along with an uncertainty estimate based on Dirichlet distributions [2]. Platforms can define confidence thresholds, such as flagging posts with over 90% fake probability, for automated action or escalation. However, human moderation remains essential, especially for borderline cases, ensuring a robust human-AI review loop that enhances trust and accountability [4, 7].
 
 ### 7. Limitations and Challenges 
 
-Clearly articulate current limitations, weaknesses, or gaps. 
-
-Offer thoughtful and practical suggestions or recommendations for future improvements. 
+SmoothDetector, while innovative, currently only supports text and image inputs. It does not yet analyze audio or video, which are growing sources of misinformation (e.g., deepfakes) [8]. Moreover, its generalization may be limited to the platforms and languages represented in the training data. Applying it to non-English or underrepresented domains may reduce performance unless retrained.
+Another challenge is explainability. While the model provides uncertainty measures, it does not yet highlight which features (words or image regions) were most influential in its decision. Adding attention-based explanations or saliency maps could improve transparency [7]. Finally, resource requirements for real-time use may be high due to the model's multimodal and probabilistic complexity, making it best suited for batch or semi-real-time workflows unless optimized.
 
 ### 8. Conclusion 
 
-Summarize key points and insights gained through your deep research. 
+SmoothDetector represents a sophisticated step toward trustworthy, multimodal fake news detection. By fusing deep learning with probabilistic reasoning, it captures both the richness of multimodal data and the uncertainty inherent in misinformation classification. Its relevance is heightened by ongoing concerns around AI-generated content and declining human moderation resources. With further development, SmoothDetector could evolve into a comprehensive tool for cross-platform content verification, supporting more informed and safer online ecosystems.
 
-Provide a reasoned outlook on future developments, sustainability, or evolution of the tool. 
+### FAQ
+**Q1: What is SmoothDetector?**  
+A: SmoothDetector is a probabilistic multimodal AI model that detects fake news by jointly analyzing text and images, while also outputting calibrated uncertainty estimates.
+**Q2: How does SmoothDetector differ from older fake news detectors?**  
+A: Unlike text-only or image-only models, SmoothDetector combines both modalities and models uncertainty using a Dirichlet distribution, enabling nuanced and confidence-aware decisions.
+**Q3: What is a smoothed Dirichlet distribution?**  
+A: It is a probabilistic tool used to represent belief over class probabilities. In SmoothDetector, it allows the model to express not just a prediction but also the certainty of that prediction.
+**Q4: What platforms and languages does SmoothDetector support?**  
+A: It was trained on Twitter (X) and Weibo data in English and Chinese. For other platforms or languages, retraining or fine-tuning is advised.
+**Q5: Is the tool publicly available?**  
+A: Yes. The model architecture and code were made publicly accessible as part of the authors' IEEE Access publication.
+**Q6: Can SmoothDetector detect deepfakes?**  
+A: Not yet. Current functionality is limited to text and static images. However, the authors are working toward extending it to video and audio.
+**Q7: What datasets were used in training?**  
+A: The Twitter MediaEval 2015 dataset and a Weibo fake news dataset. These are both well-established in the fake news detection research community.
+**Q8: What is required to run SmoothDetector in practice?**  
+A: Preprocessed text and image inputs, a suitable computing environment (e.g., Python with deep learning libraries), and thresholding logic to interpret the probabilistic outputs.
+**Q9: Is it explainable?**  
+A: Partially. It provides uncertainty estimates but lacks explicit feature attribution or visual explanations. Explainability could be improved with future versions.
 
 ### 9. References 
 
@@ -59,9 +74,3 @@ MUST use URLs for automatic verification.
 Sources may include official documentation, academic papers, credible blogs, authoritative industry articles, or GitHub repositories. 
 
  
-**Formatting and Length**
-Your .txt file should have a clearly organized structure with distinguishable headings marked using plain text (e.g., ### 1. Introduction). 
-
-Document length: approximately 1,000–1,500 words (around 2–3 pages of text). 
-
-Ensure readability, clarity, and professional communication quality. 
