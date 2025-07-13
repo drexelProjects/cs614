@@ -1,6 +1,7 @@
 ### 1. Introduction
 
-SmoothDetector is a recently developed machine learning tool introduced in April 2025 by researchers at Concordia University. It is designed to detect fake news by analyzing both text and image content simultaneously, combining deep neural networks with probabilistic modeling [1]. This tool was selected for evaluation because it represents a unique step forward in multimodal misinformation detection and reflects critical advances in trust-aware AI systems, which are crucial to their widespread adoption. With the increasing prevalence of fake news, often disseminated through mixed-media formats like tweets with deceptive captions and unrelated images, SmoothDetector's design is highly relevant within current machine learning research trends focused on context fusion and uncertainty quantification [2, 3]. Its architecture exemplifies the growing emphasis in modern ML research on building interpretable, multimodal, and uncertainty-aware systems capable of making calibrated decisions in complex, high-stakes environments.
+SmoothDetector is a recently developed machine learning tool introduced in April 2025 by researchers at Concordia University. It is designed to detect fake news by analyzing both text and image content simultaneously, combining deep neural networks with probabilistic modeling [1]. This tool was selected for evaluation because it represents a unique step forward in multimodal misinformation detection and reflects critical advances in trust-aware AI systems, which are crucial to their widespread adoption. 
+With the increasing prevalence of fake news, often disseminated through mixed-media formats like tweets with deceptive captions and unrelated images, SmoothDetector's design is highly relevant within current machine learning research trends focused on context fusion and uncertainty quantification [2, 3]. Its architecture exemplifies the growing emphasis in modern ML research on building interpretable, multimodal, and uncertainty-aware systems capable of making calibrated decisions in complex, high-stakes environments.
 
 ### 2. Background and Motivation 
 
@@ -10,17 +11,11 @@ Researchers monitored differential diffusion of all verified true and fake news 
 ### 3. Technical Overview 
 
 SmoothDetector operates through a structured pipeline that integrates multimodal feature extraction, probabilistic reasoning, and uncertainty quantification. The model is built on the foundation of deep neural networks, combining a transformer-based text encoder and a convolutional or vision transformer-based image encoder, which are independently trained to capture high-level semantic and visual features from social media posts [5, 7].
-
 Once both text and image modalities are processed, their respective embeddings are projected into a joint latent representation space. This fusion is not a simple concatenation but a learned integration via a shared neural layer or attention mechanism that captures inter-modal relationships [5]. This mechanism is critical for handling subtle semantic mismatches between text and image—such as when an image appears legitimate but contradicts the textual claim, a common tactic in fake news [4].
-
 A key innovation in SmoothDetector is its use of evidential deep learning combined with subjective logic to model prediction uncertainty [8, 9]. Instead of producing a single probability vector via softmax (as in conventional classifiers), the model fits a Dirichlet distribution over the class probabilities. This enables the model to express both confidence and uncertainty: if the evidence from both modalities is strong and coherent, the Dirichlet distribution becomes sharp and peaked; if the evidence is weak or conflicting, the distribution flattens, indicating ambiguity in the classification [5].
-
 The smoothed Dirichlet mechanism introduces a regularization strategy that reduces sensitivity to noise and helps the model avoid overconfident predictions in low-evidence scenarios [5]. This smoothing is particularly effective in handling real-world misinformation, where inputs may be ambiguous, sarcastic, or intentionally misleading.
-
 Mathematically, SmoothDetector models the posterior belief over classes as a Dirichlet distribution parameterized by an evidence vector. The expected class probability is computed from the normalized evidence, and the model is trained using a loss function that penalizes both incorrect and overconfident predictions. This often includes a Mean Squared Error (MSE) between the expected Dirichlet output and the ground truth label, combined with Kullback-Leibler divergence-based regularization [8].
-
 The end-to-end training process optimizes all components—the encoders, fusion module, and Dirichlet parameter estimator—on a dataset of labeled text-image pairs. During inference, SmoothDetector outputs the predicted class, the total belief mass (total evidence), and an explicit uncertainty estimate, enabling downstream systems or human reviewers to make calibrated decisions [5, 6, 10].
-
 Overall, SmoothDetector exemplifies emerging trends in ML toward probabilistic multimodal reasoning, uncertainty-aware predictions, and ethical AI deployment, making it a strong candidate for misinformation detection and broader trustworthy AI applications [11, 12].
 
 ### 4. Applications and Use Cases 
