@@ -1,0 +1,9 @@
+ipython==8.12.3
+openai_whisper==20250625
+pandas==2.3.2
+transformers==4.55.0
+joblib==1.5.1
+librosa==0.11.0
+matplotlib==3.10.5
+numpy==2.3.2
+scikit_learn==1.7.1
