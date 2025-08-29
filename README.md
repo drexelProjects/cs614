@@ -10,4 +10,4 @@ Using a Random Forest baseline, we achieved preliminary classification accuracy 
 ### [Speech Model](dysarthriaDetection.ipynb)
 For audio-based detection, we developed a prototype using Wav2Vec2 embeddings with an attention-based neural network classifier. Early experiments on dysarthric/stroke-like speech corpora indicate that the model can capture prosodic and phonetic cues relevant to stroke. We visualize attention heatmaps over time and model confidence trajectories, illustrating the interpretability of predictions and potential for real-time monitoring during emergency calls. 
 
-Note: All libraries and versions used are present in (requirements.txt)[requirements.txt] (pip install -r requirements.txt)
+Note: All libraries and versions used are present in [requirements.txt](requirements.txt) (pip install -r requirements.txt)
